@@ -21,56 +21,50 @@ _commit=499339f76fdbf16af2d194d9c2c2178b48513090
 source=("git+https://github.com/oberon-manjaro/plymouth-themes-manjaro.git#commit=${_commit}")
 sha256sums=('0b7c0715961f492244b6827c8a0e98526e82568bd46c33ebdc29a6526f5a2d49')
 
+_install() {
+  cd "$pkgbase"
+  install -d "$pkgdir/usr/share/plymouth/themes"
+  cp -r "${1}" "$pkgdir/usr/share/plymouth/themes"
+}
+
 package_plymouth-theme-manjaro-cinnamon() {
   pkgdesc="Plymouth theme for Manjaro Cinnamon"
   install=manjaro-cinnamon.install
 
-  cd "$pkgbase"
-  install -d "$pkgdir/usr/share/plymouth/themes"
-  cp -r manjaro-cinnamon "$pkgdir/usr/share/plymouth/themes"
+  _install "manjaro-cinnamon"
 }
 
 package_plymouth-theme-manjaro-circle() {
   pkgdesc="Green and grey Plymouth theme with round icon"
   install=manjaro-circle.install
 
-  cd "$pkgbase"
-  install -d "$pkgdir/usr/share/plymouth/themes"
-  cp -r manjaro-circle "$pkgdir/usr/share/plymouth/themes"
+  _install "manjaro-circle"
 }
 
 package_plymouth-theme-manjaro-deepin-circle() {
   pkgdesc="Plymouth theme for Manjaro Deepin with round icon"
   install=manjaro-deepin-circle.install
 
-  cd "$pkgbase"
-  install -d "$pkgdir/usr/share/plymouth/themes"
-  cp -r manjaro-deepin-circle "$pkgdir/usr/share/plymouth/themes"
+  _install "manjaro-deepin-circle"
 }
 
 package_plymouth-theme-manjaro-deepin() {
   pkgdesc="Plymouth theme for Manjaro Deepin"
   install=manjaro-deepin.install
 
-  cd "$pkgbase"
-  install -d "$pkgdir/usr/share/plymouth/themes"
-  cp -r manjaro-deepin "$pkgdir/usr/share/plymouth/themes"
+  _install "manjaro-deepin"
 }
 
 package_plymouth-theme-manjaro-extra-elegant() {
   pkgdesc="Green Manjaro Plymouth theme with round icon"
   install=manjaro-extra-elegant.install
 
-  cd "$pkgbase"
-  install -d "$pkgdir/usr/share/plymouth/themes"
-  cp -r manjaro-extra-elegant "$pkgdir/usr/share/plymouth/themes"
+  _install "manjaro-extra-elegant"
 }
 
 package_plymouth-theme-manjaro-gnome() {
   pkgdesc="Plymouth theme for Manjaro GNOME"
   install=manjaro-gnome.install
 
-  cd "$pkgbase"
-  install -d "$pkgdir/usr/share/plymouth/themes"
-  cp -r manjaro-gnome "$pkgdir/usr/share/plymouth/themes"
+  _install "manjaro-gnome"
 }
