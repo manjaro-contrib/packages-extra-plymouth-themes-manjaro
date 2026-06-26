@@ -10,7 +10,7 @@ pkgname=(
 )
 pkgbase=plymouth-themes-manjaro
 pkgver=2.0
-pkgrel=5
+pkgrel=6
 pkgdesc="Manjaro Plymouth themes"
 arch=('any')
 url="https://github.com/oberon-manjaro/plymouth-themes-manjaro"
@@ -24,7 +24,7 @@ sha256sums=('0b7c0715961f492244b6827c8a0e98526e82568bd46c33ebdc29a6526f5a2d49')
 _install() {
   cd "$pkgbase"
   install -d "$pkgdir/usr/share/plymouth/themes"
-  cp -r "${1}" "$pkgdir/usr/share/plymouth/themes"
+  cp -a "${1}" "$pkgdir/usr/share/plymouth/themes"
 }
 
 package_plymouth-theme-manjaro-cinnamon() {
