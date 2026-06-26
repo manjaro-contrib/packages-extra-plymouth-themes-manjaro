@@ -10,7 +10,7 @@ pkgname=(
 )
 pkgbase=plymouth-themes-manjaro
 pkgver=2.0
-pkgrel=6
+pkgrel=7
 pkgdesc="Manjaro Plymouth themes"
 arch=('any')
 url="https://github.com/oberon-manjaro/plymouth-themes-manjaro"
