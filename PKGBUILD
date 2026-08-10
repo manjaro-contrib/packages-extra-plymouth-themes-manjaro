@@ -1,4 +1,5 @@
-# Contributor: Bernhard Landauer <oberon@manjaro.org>
+# Maintainer:
+# Contributor: Bernhard Landauer <bernhard@manjaro.org>
 
 pkgname=(
   'plymouth-theme-manjaro-cinnamon'
